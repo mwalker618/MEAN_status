@@ -3,21 +3,19 @@
 		<div class="row">
 			<p class="lead">
 			<h2>
-				Welcome to TheHub!<br>
+				Welcome to CatHub!<br>
 				<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Internet_Defense_League_logo_-_cat_face.svg/499px-Internet_Defense_League_logo_-_cat_face.svg.png"> <br>
-				Please sign in or sign up to unlock some hidden features!
+				A place where cat lovers can meet! Post about your cat and chat about your cat while making some friends. <br>
 				
 				</h2>
 			</p>
 		</div>
-		<div class="row">
-			<p>
-				<button type="button" ui-route="/signup" ng-class="{active: $uiRoute}">Sign Up</button>
-				<button type="button" ui-route="/signin" ng-class="{active: $uiRoute}" href="/#!/signin">Sign In</button>
-			</li>
-		</ul>
-			</p>
-		</div>
+		<div class="users">
+	View the most recent users to post!:<br>
+		<a data-ng-repeat="article in articles" data-ng-href="#!/articles/{{article._id}}"> 
+		<span data-ng-bind="authentication.user.displayName"> </span> </a>
+	</div>
+	
 	</div>
 
 	</div>

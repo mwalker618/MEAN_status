@@ -1,25 +1,27 @@
 <section data-ng-controller="ArticlesController" data-ng-init="find()">
 
 	<div class="page-header">
-		<h2>Welcome Username!</h2> <br>
+		<h2>Welcome, 
+		<a data-ng-repeat="article in articles" data-ng-href="#!/articles/{{article._id}}">
+		<span data-ng-bind="authentication.user.displayName"> </span> </a>
+		</h2> <br>
 			<img src="http://nalacat.com/wp-content/uploads/2013/01/IMG_4837-300x300.jpg"> <br>
 			<img src="https://www.hashtags.org/wp-content/plugins/wordpress-social-login/assets/img/32x32/wpzoom/twitter.png"> 
 			<img src="https://p2.zdassets.com/hc/theme_assets/361935/200000080/follow_facebook_on.png">
 			
 			<div class="create">
-				<form action="create">
+	<form action="create">
 					Create a posting: <input type="text" name="create"> <br>
-					<input type="submit" class="btn btn-default" value="Upload Image">
 					<input type="submit" class="btn btn-default">
 		</form>
 	</div>
 	</div>
-	
-	<div class = "users">
-		<button type="button" ui-route="/friend" ng-class="{active: $uiRoute}" href="/#!/friend">View New Users!</button>
-	
+
+	<div class="users">
+	View the most recent users to post!:<br>
+		<a data-ng-repeat="article in articles" data-ng-href="#!/articles/{{article._id}}"> 
+		<span data-ng-bind="authentication.user.displayName"> </span> </a>
 	</div>
-	
 	
 	<br>
 	<div class="feed">
