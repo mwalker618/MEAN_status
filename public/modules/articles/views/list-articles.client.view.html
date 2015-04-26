@@ -9,12 +9,33 @@
 			<img src="https://www.hashtags.org/wp-content/plugins/wordpress-social-login/assets/img/32x32/wpzoom/twitter.png"> 
 			<img src="https://p2.zdassets.com/hc/theme_assets/361935/200000080/follow_facebook_on.png">
 			
-			<div class="create">
-	<form action="create">
-					Create a posting: <input type="text" name="create"> <br>
+	
+	<div class="col-md-12">
+	<h2>Create a post!</h2>
+		<form name="articleForm" class="form-horizontal" data-ng-submit="create()" novalidate>
+			<fieldset>
+				<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
+					<label class="control-label" for="title">Post Title</label>
+					<div class="controls">
+						<input name="title" type="text" data-ng-model="title" id="title" class="form-control" placeholder="Title" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="content">Post Content</label>
+					<div class="controls">
+						<textarea name="content" data-ng-model="content" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
+					</div>
+				</div>
+				<div class="form-group">
 					<input type="submit" class="btn btn-default">
+				</div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+			</fieldset>
 		</form>
 	</div>
+	
 	</div>
 
 	<br>
