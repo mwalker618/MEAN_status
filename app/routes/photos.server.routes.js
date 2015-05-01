@@ -15,6 +15,7 @@ module.exports = function(app) {
 		.get(photos.read)
 		.put(users.requiresLogin, photos.hasAuthorization, photos.update)
 		.delete(users.requiresLogin, photos.hasAuthorization, photos.delete);
+		
 	//adds a route for likes
 	app.route('/photos/like/:photoId')
         .put(users.requiresLogin, photos.like);
