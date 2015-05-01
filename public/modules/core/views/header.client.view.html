@@ -23,11 +23,6 @@
 				<a ng-switch-default href="/#!/{{item.link}}" data-ng-bind="item.title"></a>
 			</li>
 		</ul>
-			
-		<form class="search">
-		<input type="text" name="search" value="Search">
-		<input type="submit" class="btn btn-default">
-		<form>
 		
 		<ul class="nav navbar-nav navbar-right" data-ng-hide="authentication.user">
 			<li ui-route="/signup" ng-class="{active: $uiRoute}">
