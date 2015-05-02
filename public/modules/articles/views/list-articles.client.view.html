@@ -4,13 +4,17 @@
 		<h2>Welcome, 
 		
 		<span data-ng-bind="authentication.user.displayName"> </span>
-		</h2> 
+		</h2>
+		
         <div class="col-md-6">
         <br><br>
-			 
-		User's Email: <span data-ng-bind="authentication.user.email"></span><br>
-		User's Gender: <span data-ng-bind="authentication.user.gender"></span><br>
-			</div>
+			 <h1>
+		<strong> Name: </strong> <span data-ng-bind="authentication.user.firstName"></span> <span data-ng-bind="authentication.user.lastName"></span><br> <br>
+		<strong>Gender: </strong> <span data-ng-bind="authentication.user.gender"></span><br> <br>
+		<strong> Email: </strong> <span data-ng-bind="authentication.user.email"></span><br> <br>
+		<strong> Hometown: </strong> <span data-ng-bind="authentication.user.hometown"></span>
+			<h1>
+		</div>
 			
 	
 	<div class="col-md-6">

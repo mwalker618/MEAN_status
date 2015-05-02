@@ -66,6 +66,12 @@ gender: {
 		default: '',
 		validate: [validateLocalStrategyProperty, 'Please fill in your gender']
 	},
+	hometown: {
+		type: String,
+		trim: true,
+		default: '',
+		validate: [validateLocalStrategyProperty, 'Please fill in your hometown']
+	},
 	salt: {
 		type: String
 	},
