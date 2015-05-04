@@ -27,6 +27,8 @@ var CatSchema = new Schema({
 	breed: {
 		type: String,
 		default: '',
+
+		trim: true
 	},
 	gender: {
 		type: String,

@@ -14,6 +14,7 @@ var mongoose = require('mongoose'),
 exports.create = function(req, res) {
 	var cat = new Cat(req.body);
 	cat.user = req.user;
+	cat.breed = req.breed;
 
 	cat.save(function(err) {
 		if (err) {
