@@ -13,7 +13,18 @@
 		<strong>Gender: </strong> <span data-ng-bind="authentication.user.gender"></span><br> <br>
 		<strong> Email: </strong> <span data-ng-bind="authentication.user.email"></span><br> <br>
 		<strong> Hometown: </strong> <span data-ng-bind="authentication.user.hometown"></span>
-			<h1>
+			  <div class="list-group">
+        <a data-ng-repeat="cat in cats" data-ng-href="#!/cats/{{cat._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Adopted by
+				<span data-ng-bind="cat.user.displayName"></span>
+				on
+                <span data-ng-bind="cat.date | date:'medium'"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="cat.name"></h4>
+        </a>
+    </div>
+            <a href="#!/cats/create">Add Cat</a> 
 		</div>
 			
 	
