@@ -18,5 +18,9 @@ angular.module('core').controller('HeaderController', ['$scope', '$rootScope', '
 			console.log(article);
                   $rootScope.myValue=true;
 		});
+		Socket.on('cat.created', function(cat) {
+			console.log(cat);
+                  $rootScope.myValue=true;
+		});
 	}
 ]);
