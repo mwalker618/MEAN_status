@@ -1,0 +1,12 @@
+<section data-ng-controller="MapsController" data-ng-init="find()">
+	<script type="text/javascript" src='lib/lodash/dist/lodash.underscore.js'></script> 
+	<script type="text/javascript" src="lib/angular-google-maps/dist/angular-google-maps.js"></script>
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+
+    <div class="page-header">
+        <h1>Maps</h1>
+    </div>
+    
+    <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+    
+</section>
