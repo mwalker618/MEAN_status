@@ -9,7 +9,10 @@ angular.module('cats').controller('CatsController', ['$scope', '$stateParams', '
 		$scope.create = function() {
 			// Create new Cat object
 			var cat = new Cats ({
-				name: this.name
+				name: this.name,
+				adopted: this.adopted,
+				breed: this.breed,
+				gender: this.gender
 			});
 
 			// Redirect after save
